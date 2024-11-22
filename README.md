@@ -1,2 +1,2 @@
-# scripnyc-org
-ScripNYC Website
+# ScripNYC Website
+See: https://www.scripnyc.org
