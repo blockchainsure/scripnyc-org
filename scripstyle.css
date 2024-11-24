@@ -1,0 +1,105 @@
+/* lato-300 - latin-ext_latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/lato-v23-latin-ext_latin-300.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/lato-v23-latin-ext_latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v23-latin-ext_latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v23-latin-ext_latin-300.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v23-latin-ext_latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v23-latin-ext_latin-300.svg#Lato') format('svg'); /* Legacy iOS */
+  }
+
+  /* lato-regular - latin-ext_latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v23-latin-ext_latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/lato-v23-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/lato-v23-latin-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/lato-v23-latin-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/lato-v23-latin-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/lato-v23-latin-ext_latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+  }
+  /* All content, images, and code are COPYRIGHT 2022-2024, Blockchainsure. All rights reserved. Blockchainsure and Blockchainsure Logo are trademarks of Cassandra LS */
+  /* scripnyc.org | X: @blockchainsure | Github: blockchainsure */
+  /* BY USING THIS WEBSITE YOU AGREE TO OUR TERMS OF USE */
+
+* {
+    box-sizing: border-box;  
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.btn-row {
+    display: flex;
+    justify-content: center; /* centers buttons in row horizontally */
+    gap: 10px; /* adds space between buttons */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.dwnld-btn, .updates-btn, .contact {
+    background: none;
+    color: #363636;
+    text-decoration: none;
+    font-size: 0.8em;
+    border-radius: 3px;
+    transition: 0.1s;
+    border: 1px solid #363636;
+    width: 100%;  /* Make the buttons take up full width of the parent container */
+    max-width: 250px;  /* Optional: You can limit max-width to a specific value if you want */
+    height: 50px;  /* Set height for consistency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    box-sizing: border-box; 
+  }
+
+  .dwnld-btn:hover, .updates-btn:hover, .contact:hover {
+    color: #f8f8ff;
+    background: #3c82c3;
+    border-color: #3c82c3;
+  }
+
+  /* Responsive layout - aligns the buttons into a single column for phone screens */
+  @media (max-width: 600px) {
+    .btn-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .dwnld-btn, .updates-btn, .contact {
+      width: 90%;  /* Buttons fill nearly the entire width on mobile */
+      max-width: none;  /* Remove max-width to allow 90% width */
+  }
+  }
+
+  .paper-row {
+    flex-grow: 1;  /* Allow iframe to take up remaining space below button row */
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    height: 0; /* This is important! */
+    }
+
+  /* Ensure iframe takes up all remaining space without extra whitespace */
+  @media (min-width: 600px) {
+    .container {
+        padding: 0;
+    }
+  }
