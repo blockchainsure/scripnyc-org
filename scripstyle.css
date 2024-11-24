@@ -60,7 +60,7 @@
     border-radius: 3px;
     transition: 0.1s;
     border: 1px solid #363636;
-    width: 100%;  /* Make the buttons take up full width of the parent container */
+    width: auto;
     max-width: 250px;  /* Optional: You can limit max-width to a specific value if you want */
     height: 50px;  /* Set height for consistency */
     display: flex;
@@ -94,7 +94,6 @@
     width: 100%;
     background-color: transparent;
     border: none;
-    height: 0; /* This is important! */
     }
 
   /* Ensure iframe takes up all remaining space without extra whitespace */
