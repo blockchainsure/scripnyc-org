@@ -98,12 +98,7 @@
     border: none;
     }
 
-  /* Ensure iframe takes up all remaining space without extra whitespace */
   @media (min-width: 600px) {
-    .container {
-        padding: 0;
-    }
-
     .paper-row {
       height: 50vh;
     }
