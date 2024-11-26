@@ -60,8 +60,8 @@
     border-radius: 3px;
     transition: 0.1s;
     border: 1px solid #363636;
-    width: auto;
-    max-width: 250px;  /* Optional: You can limit max-width to a specific value if you want */
+    width: 100%;
+    max-width: 260px;  /* Optional: You can limit max-width to a specific value if you want */
     height: 50px;  /* Set height for consistency */
     display: flex;
     justify-content: center;
@@ -82,16 +82,18 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
-    }
+      }
+
     .dwnld-btn, .updates-btn, .contact {
       width: 90%;  /* Buttons fill nearly the entire width on mobile */
       max-width: none;  /* Remove max-width to allow 90% width */
-  }
-  }
+      }
+    }
 
   .paper-row {
     flex-grow: 1;  /* Allow iframe to take up remaining space below button row */
     width: 100%;
+    height: 80vh;
     background-color: transparent;
     border: none;
     }
@@ -100,5 +102,9 @@
   @media (min-width: 600px) {
     .container {
         padding: 0;
+    }
+
+    .paper-row {
+      height: 50vh;
     }
   }
