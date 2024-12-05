@@ -92,22 +92,40 @@
       }
     }
 
-  .paper-row {
-    flex-grow: 1;  /* Allow iframe to take up remaining space below button row */
-    width: 100%;
-    height: 70vh; /* default height for non-mobile screens */
-    background-color: transparent;
-    border: none;
-    }
+/* PDF canvas container styling */
+.pdf-viewer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;  /* Adjust the height as needed */
+}
 
-  @media (max-width: 600px) {
-    .paper-row {
-      height: 50vh;
-    }
-  }
+#pdf-canvas {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
 
-  @media (min-width:600px) {
-    .paper-row {
-      height: 80vh;
-    }
-  }
+/* PDF control buttons styling */
+.pdf-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pdf-controls button {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #363636;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pdf-controls button:hover {
+  background-color: #3c82c3;
+  color: #fff;
+}
