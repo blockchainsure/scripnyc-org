@@ -9,97 +9,29 @@
 
     <title>ScripNYC: Sustainable Funding for Humanitarian Emergencies</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script> <!-- PDF.js library -->
-
       <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        let pdfDoc = null;
-        let currentPage = 1;
-        let zoomFactor = 1.0;
-
-        const url = 'PDF/ScripNYC_public.pdf';
-        const canvas = document.getElementById('pdf-canvas');
-        const ctx = canvas.getContext('2d');
-
-        // Function to load and render the PDF
-        function renderPage(pageNum) {
-          if (pdfDoc) {
-            pdfDoc.getPage(pageNum).then(function(page) {
-              const viewport = page.getViewport({ scale: zoomFactor });
-              canvas.height = viewport.height;
-              canvas.width = viewport.width;
-
-              page.render({
-                canvasContext: ctx,
-                viewport: viewport
-              });
-            });
-          }
-        }
-
-        // Load the PDF file
-        pdfjsLib.getDocument(url).promise.then(function(pdf) {
-          pdfDoc = pdf;
-          renderPage(currentPage);
-        }).catch(function(error) {
-          console.error("Error loading PDF: ", error);
-        });
-
-        // Navigation functions
-        function goToNextPage() {
-          if (currentPage < pdfDoc.numPages) {
-            currentPage++;
-            renderPage(currentPage);
-          }
-        }
-
-        function goToPrevPage() {
-          if (currentPage > 1) {
-            currentPage--;
-            renderPage(currentPage);
-          }
-        }
-
-        function zoomIn() {
-          zoomFactor += 0.1;
-          renderPage(currentPage);
-        }
-
-        function zoomOut() {
-            if (zoomFactor > 0.1) {
-            zoomFactor -= 0.1;
-            renderPage(currentPage);
-          }
-        }
-       
         function openFormPage() {
-          window.open('typeform.html', '_blank', 'noopener noreferrer');
+            window.open('typeform.html', '_blank', 'noopener noreferrer');
         }
-      });
-    </script>
+
+      
+      </script>
   </head>
 
   <body>
-    <div class="container">
-      <div class="btn-row">
-        <a href="PDF/ScripNYC_public.pdf" download class="dwnld-btn">DOWNLOAD PDF</a>
-        <a href="technical.html" class="updates-btn">SUPPLEMENTARY DATA</a>
-        <a href="#" onclick="openFormPage()" class="contact">CONTACT TEAM</a>
-      </div>
-
-      <!-- PDF viewer with canvas -->
-      <div class="pdf-viewer">
-        <canvas id="pdf-canvas"></canvas>
-      </div>
-
-      <!-- Navigation buttons for PDF -->
-      <div class="pdf-controls">
-        <button onclick="goToPrevPage()">Previous</button>
-        <button onclick="goToNextPage()">Next</button>
-        <button onclick="zoomIn()">Zoom In</button>
-        <button onclick="zoomOut()">Zoom Out</button>
-      </div>
+  <div class="container">
+    <div class="btn-row">
+      <a href="PDF/ScripNYC_public.pdf" download class="dwnld-btn">DOWNLOAD PDF</a>
+      <a href="technical.html" class="updates-btn">SUPPLEMENTARY DATA</a>
+      <a href="#" onclick="openFormPage()" class="contact">CONTACT TEAM</a>
     </div>
+    <iframe
+      class="paper-row"
+      title="ScripNYC Paper"
+      src="PDF/ScripNYC_public.pdf"
+      loading="lazy"
+    ></iframe>
+  </div>
   </body>
       <!-- All content, images, and code are COPYRIGHT 2022-2024, Blockchainsure. All rights reserved. Blockchainsure, Blockchainsure Logo, and ScripNYC are trademarks of Cassandra LS -->
       <!-- scripnyc.org | X: @blockchainsure | Github: blockchainsure -->
