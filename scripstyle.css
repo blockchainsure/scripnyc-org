@@ -105,6 +105,7 @@
     border: none;
     display: block;
     margin: 0 auto; /* this centers the iframe */
+    object-fit: contain; /* ensures Scrip paper scales nicely within container */
     }
 
   @media (max-width: 600px) {
