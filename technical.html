@@ -12,7 +12,7 @@
         <h1>ScripNYC Supplementary Data</h1>
         <nav>
             <ul>
-                <li><a href="index.html">RETURN TO PAPER</a></li>
+                <li><a href="index.html" aria-label="Return to main paper page">RETURN TO PAPER</a></li>
             </ul>
         </nav>
     </header>
@@ -40,7 +40,16 @@
     </main>
 
     <footer>
-        <p>Copyright &copy; 2024. All rights reserved.</p>
+        <div class='footer__copyright'>
+            Copyright &copy; <span id='copyright'></span> ScripNYC. All Rights Reserved.
+          </div>
     </footer>
+
+    <script>
+        const copyRight = document.querySelector('#copyright');
+        if (copyRight) {
+            copyRight.textContent = new Date().getFullYear().toString();
+        }
+    </script>
 </body>
 </html>

@@ -143,6 +143,14 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #f1f1f1;
-    font-size: 0.9em;
     position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, o, 0.1);
+    border-top: 1px solid #ccc;
 }
+
+.footer__copyright {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #333;
+    padding: 10px 0;
+  }
