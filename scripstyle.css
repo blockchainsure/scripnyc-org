@@ -92,17 +92,26 @@
       }
     }
 
+    .pdf-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
   .paper-row {
-    flex-grow: 1;  /* Allow iframe to take up remaining space below button row */
     width: 100%;
     height: 70vh; /* default height for non-mobile screens */
     background-color: transparent;
     border: none;
+    display: block;
+    margin: 0 auto; /* this centers the iframe */
     }
 
   @media (max-width: 600px) {
     .paper-row {
       height: 50vh;
+      min-height: 200px;
+      max-height: 50vh;
     }
   }
 

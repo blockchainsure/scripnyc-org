@@ -13,8 +13,6 @@
         function openFormPage() {
             window.open('typeform.html', '_blank', 'noopener noreferrer');
         }
-
-      
       </script>
   </head>
 
@@ -25,12 +23,15 @@
       <a href="technical.html" class="updates-btn">SUPPLEMENTARY DATA</a>
       <a href="#" onclick="openFormPage()" class="contact">CONTACT TEAM</a>
     </div>
-    <iframe
-      class="paper-row"
+    <div class="pdf-container">
+    <iframe class="paper-row"
       title="ScripNYC Paper"
       src="PDF/ScripNYC_public.pdf"
       loading="lazy"
-    ></iframe>
+      allow="fullscreen"
+      style="border: none;">
+    </iframe>
+    </div>
   </div>
   </body>
       <!-- All content, images, and code are COPYRIGHT 2022-2024, Blockchainsure. All rights reserved. Blockchainsure, Blockchainsure Logo, and ScripNYC are trademarks of Cassandra LS -->
